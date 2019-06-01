@@ -5,7 +5,7 @@ function getCookie() {
     return new Promise(
         function (resolve, reject) {
             request({
-                url: 'http://202.118.163.67/',
+                url: 'http://202.114.27.5/',
                 followRedirect: false,
                 // proxy: 'http://neauproxy.feit.me:6000',
             }, (err, res) => {
@@ -22,16 +22,16 @@ function getCookie() {
 function getIndexPage(cookie) {
     return new Promise(function (resolve, reject) {
         request({
-            url: 'http://202.118.163.67/index.php?' + cookie,
+            url: 'http://202.114.27.5/index.php?' + cookie,
             // proxy: 'http://neauproxy.feit.me:6000',
             headers: {
                 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
                 'Accept-Encoding': 'gzip, deflate',
                 'Accept-Language': 'zh-CN,zh;q=0.9',
                 Cookie: cookie,
-                Host: '202.118.163.67',
-                Origin: 'http://202.118.163.67',
-                Referer: 'http://202.118.163.67/index.php',
+                Host: '202.114.27.5',
+                Origin: 'http://202.114.27.5',
+                Referer: 'http://202.114.27.5/index.php',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
             },
         }, (err, res) => {
@@ -45,7 +45,7 @@ function login(username, password, cookie) {
     return new Promise(
         function (resolve, reject) {
             request({
-                url: 'http://202.118.163.67/index.php',
+                url: 'http://202.114.27.5/index.php',
                 method: 'POST',
                 // proxy: 'http://neauproxy.feit.me:6000',
                 headers: {
@@ -56,9 +56,9 @@ function login(username, password, cookie) {
                     Connection: 'keep-alive',
                     'Upgrade-Insecure-Requests': 1,
                     Cookie: cookie,
-                    Host: '202.118.163.67',
-                    Origin: 'http://202.118.163.67',
-                    Referer: 'http://202.118.163.67/index.php',
+                    Host: '202.114.27.5',
+                    Origin: 'http://202.114.27.5',
+                    Referer: 'http://202.114.27.5/index.php',
                     'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
                 },
                 form: {
@@ -77,7 +77,7 @@ function checkLoginSuccess(username, cookie) {
     return new Promise(
         function (resolve, reject) {
             request({
-                url: 'http://202.118.163.67/login/hpindex_student.php',
+                url: 'http://202.114.27.5/login/hpindex_student.php',
                 method: 'GET',
                 // proxy: 'http://neauproxy.feit.me:6000',
                 headers: {
@@ -85,9 +85,9 @@ function checkLoginSuccess(username, cookie) {
                     'Accept-Encoding': 'gzip, deflate',
                     'Accept-Language': 'zh-CN,zh;q=0.9',
                     Cookie: cookie,
-                    Host: '202.118.163.67',
-                    Origin: 'http://202.118.163.67',
-                    Referer: 'http://202.118.163.67/index.php',
+                    Host: '202.114.27.5',
+                    Origin: 'http://202.114.27.5',
+                    Referer: 'http://202.114.27.5/index.php',
                     'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
                 },
             }, (err, res, html) => {

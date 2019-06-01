@@ -7,11 +7,11 @@ const wait = require('./wait.js');
 function ready1(cookie, bookNum) {
     return new Promise((resolve, reject) => {
         request({
-            url: 'http://202.118.163.67/book/index.php?BookID=142&ClassID=' + bookNum + '&Quiz=N',
+            url: 'http://202.114.27.5/book/index.php?BookID=142&ClassID=' + bookNum + '&Quiz=N',
             // proxy: 'http://neauproxy.feit.me:6000',
             headers: {
                 Cookie: cookie,
-                Referer: 'http://202.118.163.67/login/hpindex_student.php',
+                Referer: 'http://202.114.27.5/login/hpindex_student.php',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
             }
         }, (err, res, html) => {
@@ -25,11 +25,11 @@ function ready1(cookie, bookNum) {
 function ready2(cookie) {
     return new Promise((resolve, reject) => {
         request({
-            url: 'http://202.118.163.67/book/book142/index.php?Quiz=N&whichActionPage=',
+            url: 'http://202.114.27.5/book/book142/index.php?Quiz=N&whichActionPage=',
             // proxy: 'http://neauproxy.feit.me:6000',
             headers: {
                 Cookie: cookie,
-                Referer: 'http://202.118.163.67/book/index.php?BookID=142&ClassID=4913&Quiz=N',
+                Referer: 'http://202.114.27.5/book/index.php?BookID=142&ClassID=4913&Quiz=N',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
             }
         }, (err, res, html) => {
@@ -43,15 +43,15 @@ function ready2(cookie) {
 function getSuccessPage(cookie) {
     return new Promise(function (resolve, rejsct) {
         request({
-            url: 'http://202.118.163.67/book/book142/unit_index.php?UnitID=2',
+            url: 'http://202.114.27.5/book/book142/unit_index.php?UnitID=2',
             // proxy: 'http://neauproxy.feit.me:6000',
             headers: {
                 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
                 'Accept-Encoding': 'gzip, deflate',
                 'Accept-Language': 'zh-CN,zh;q=0.9',
                 Cookie: cookie,
-                Host: '202.118.163.67',
-                Referer: 'http://202.118.163.67/book/book142/jdindex.php',
+                Host: '202.114.27.5',
+                Referer: 'http://202.114.27.5/book/book142/jdindex.php',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
             },
         }, (err, res, html) => {
@@ -67,7 +67,7 @@ function getSuccessPage(cookie) {
 function section2sister1S(cookie) {
     return new Promise(function (resolve, reject) {
         request({
-            url: 'http://202.118.163.67/book/book142/uyu21blank.php',
+            url: 'http://202.114.27.5/book/book142/uyu21blank.php',
             method: 'POST',
             // proxy: 'http://neauproxy.feit.me:6000',
             headers: {
@@ -75,9 +75,9 @@ function section2sister1S(cookie) {
                 'Accept-Encoding': 'gzip, deflate',
                 'Accept-Language': 'zh-CN,zh;q=0.9',
                 Cookie: cookie,
-                Host: '202.118.163.67',
-                Origin: 'http://202.118.163.67',
-                Referer: 'http://202.118.163.67/book/book142/uyu21blank.php?UnitID=1&SectionID=2&SisterID=2',
+                Host: '202.114.27.5',
+                Origin: 'http://202.114.27.5',
+                Referer: 'http://202.114.27.5/book/book142/uyu21blank.php?UnitID=1&SectionID=2&SisterID=2',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
             },
             form: {
@@ -105,7 +105,7 @@ function section2sister1S(cookie) {
 function section2sister2S(cookie) {
     return new Promise(function (resolve, reject) {
         request({
-            url: 'http://202.118.163.67/book/book142/uyu522checkbox.php',
+            url: 'http://202.114.27.5/book/book142/uyu522checkbox.php',
             method: 'POST',
             // proxy: 'http://neauproxy.feit.me:6000',
             headers: {
@@ -113,8 +113,8 @@ function section2sister2S(cookie) {
                 'Accept-Encoding': 'gzip, deflate',
                 'Accept-Language': 'zh-CN,zh;q=0.9',
                 Cookie: cookie,
-                Host: '202.118.163.67',
-                Origin: 'http://202.118.163.67',
+                Host: '202.114.27.5',
+                Origin: 'http://202.114.27.5',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
             },
             form: {
@@ -141,7 +141,7 @@ function section2sister2S(cookie) {
 function section2sister3S(cookie) {
     return new Promise(function (resolve, reject) {
         request({
-            url: 'http://202.118.163.67/book/book142/uyu21blank.php',
+            url: 'http://202.114.27.5/book/book142/uyu21blank.php',
             method: 'POST',
             // proxy: 'http://neauproxy.feit.me:6000',
             headers: {
@@ -149,8 +149,8 @@ function section2sister3S(cookie) {
                 'Accept-Encoding': 'gzip, deflate',
                 'Accept-Language': 'zh-CN,zh;q=0.9',
                 Cookie: cookie,
-                Host: '202.118.163.67',
-                Origin: 'http://202.118.163.67',
+                Host: '202.114.27.5',
+                Origin: 'http://202.114.27.5',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
             },
             form: {
@@ -179,7 +179,7 @@ function section2sister3S(cookie) {
 function section2sister4S(cookie) {
     return new Promise(function (resolve, reject) {
         request({
-            url: 'http://202.118.163.67/book/book142/uyu23drag.php',
+            url: 'http://202.114.27.5/book/book142/uyu23drag.php',
             method: 'POST',
             // proxy: 'http://neauproxy.feit.me:6000',
             headers: {
@@ -187,8 +187,8 @@ function section2sister4S(cookie) {
                 'Accept-Encoding': 'gzip, deflate',
                 'Accept-Language': 'zh-CN,zh;q=0.9',
                 Cookie: cookie,
-                Host: '202.118.163.67',
-                Origin: 'http://202.118.163.67',
+                Host: '202.114.27.5',
+                Origin: 'http://202.114.27.5',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
             },
             form: {
@@ -212,7 +212,7 @@ function section2sister4S(cookie) {
 function section2sister5S(cookie) {
     return new Promise(function (resolve, reject) {
         request({
-            url: 'http://202.118.163.67/book/book142/uyu29blank.php',
+            url: 'http://202.114.27.5/book/book142/uyu29blank.php',
             method: 'POST',
             // proxy: 'http://neauproxy.feit.me:6000',
             headers: {
@@ -220,8 +220,8 @@ function section2sister5S(cookie) {
                 'Accept-Encoding': 'gzip, deflate',
                 'Accept-Language': 'zh-CN,zh;q=0.9',
                 Cookie: cookie,
-                Host: '202.118.163.67',
-                Origin: 'http://202.118.163.67',
+                Host: '202.114.27.5',
+                Origin: 'http://202.114.27.5',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
             },
             form: {
@@ -249,7 +249,7 @@ function section2sister5S(cookie) {
 function section2sister6S(cookie) {
     return new Promise(function (resolve, reject) {
         request({
-            url: 'http://202.118.163.67/book/book142/uyu34checkbox.php',
+            url: 'http://202.114.27.5/book/book142/uyu34checkbox.php',
             method: 'POST',
             // proxy: 'http://neauproxy.feit.me:6000',
             headers: {
@@ -257,8 +257,8 @@ function section2sister6S(cookie) {
                 'Accept-Encoding': 'gzip, deflate',
                 'Accept-Language': 'zh-CN,zh;q=0.9',
                 Cookie: cookie,
-                Host: '202.118.163.67',
-                Origin: 'http://202.118.163.67',
+                Host: '202.114.27.5',
+                Origin: 'http://202.114.27.5',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
             },
             form: {
@@ -284,7 +284,7 @@ function section2sister6S(cookie) {
 function section2sister7S(cookie) {
     return new Promise(function (resolve, reject) {
         request({
-            url: 'http://202.118.163.67/book/book142/uyu823mc.php',
+            url: 'http://202.114.27.5/book/book142/uyu823mc.php',
             method: 'POST',
             // proxy: 'http://neauproxy.feit.me:6000',
             headers: {
@@ -292,8 +292,8 @@ function section2sister7S(cookie) {
                 'Accept-Encoding': 'gzip, deflate',
                 'Accept-Language': 'zh-CN,zh;q=0.9',
                 Cookie: cookie,
-                Host: '202.118.163.67',
-                Origin: 'http://202.118.163.67',
+                Host: '202.114.27.5',
+                Origin: 'http://202.114.27.5',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
             },
             form: {
@@ -321,7 +321,7 @@ function section2sister7S(cookie) {
 function section2sister8S(cookie) {
     return new Promise(function (resolve, reject) {
         request({
-            url: 'http://202.118.163.67/book/book142/uyu21blank.php',
+            url: 'http://202.114.27.5/book/book142/uyu21blank.php',
             method: 'POST',
             // proxy: 'http://neauproxy.feit.me:6000',
             headers: {
@@ -329,8 +329,8 @@ function section2sister8S(cookie) {
                 'Accept-Encoding': 'gzip, deflate',
                 'Accept-Language': 'zh-CN,zh;q=0.9',
                 Cookie: cookie,
-                Host: '202.118.163.67',
-                Origin: 'http://202.118.163.67',
+                Host: '202.114.27.5',
+                Origin: 'http://202.114.27.5',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
             },
             form: {
@@ -363,7 +363,7 @@ function section2sister8S(cookie) {
 function section2sister9S(cookie) {
     return new Promise(function (resolve, reject) {
         request({
-            url: 'http://202.118.163.67/book/book142/uyu34checkbox.php',
+            url: 'http://202.114.27.5/book/book142/uyu34checkbox.php',
             method: 'POST',
             // proxy: 'http://neauproxy.feit.me:6000',
             headers: {
@@ -371,8 +371,8 @@ function section2sister9S(cookie) {
                 'Accept-Encoding': 'gzip, deflate',
                 'Accept-Language': 'zh-CN,zh;q=0.9',
                 Cookie: cookie,
-                Host: '202.118.163.67',
-                Origin: 'http://202.118.163.67',
+                Host: '202.114.27.5',
+                Origin: 'http://202.114.27.5',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
             },
             form: {
@@ -396,7 +396,7 @@ function section2sister9S(cookie) {
 function section2sister10S(cookie) {
     return new Promise(function (resolve, reject) {
         request({
-            url: 'http://202.118.163.67/book/book142/uyu33blank.php',
+            url: 'http://202.114.27.5/book/book142/uyu33blank.php',
             method: 'POST',
             // proxy: 'http://neauproxy.feit.me:6000',
             headers: {
@@ -404,8 +404,8 @@ function section2sister10S(cookie) {
                 'Accept-Encoding': 'gzip, deflate',
                 'Accept-Language': 'zh-CN,zh;q=0.9',
                 Cookie: cookie,
-                Host: '202.118.163.67',
-                Origin: 'http://202.118.163.67',
+                Host: '202.114.27.5',
+                Origin: 'http://202.114.27.5',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
             },
             form: {
@@ -438,7 +438,7 @@ function section2sister10S(cookie) {
 function section2sister11S(cookie) {
     return new Promise(function (resolve, reject) {
         request({
-            url: 'http://202.118.163.67/book/book142/uyu33blank.php',
+            url: 'http://202.114.27.5/book/book142/uyu33blank.php',
             method: 'POST',
             // proxy: 'http://neauproxy.feit.me:6000',
             headers: {
@@ -446,8 +446,8 @@ function section2sister11S(cookie) {
                 'Accept-Encoding': 'gzip, deflate',
                 'Accept-Language': 'zh-CN,zh;q=0.9',
                 Cookie: cookie,
-                Host: '202.118.163.67',
-                Origin: 'http://202.118.163.67',
+                Host: '202.114.27.5',
+                Origin: 'http://202.114.27.5',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
             },
             form: {
@@ -480,7 +480,7 @@ function section2sister11S(cookie) {
 function section2sister12S(cookie) {
     return new Promise(function (resolve, reject) {
         request({
-            url: 'http://202.118.163.67/book/book142/uyu41mc.php',
+            url: 'http://202.114.27.5/book/book142/uyu41mc.php',
             method: 'POST',
             // proxy: 'http://neauproxy.feit.me:6000',
             headers: {
@@ -488,8 +488,8 @@ function section2sister12S(cookie) {
                 'Accept-Encoding': 'gzip, deflate',
                 'Accept-Language': 'zh-CN,zh;q=0.9',
                 Cookie: cookie,
-                Host: '202.118.163.67',
-                Origin: 'http://202.118.163.67',
+                Host: '202.114.27.5',
+                Origin: 'http://202.114.27.5',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
             },
             form: {
@@ -518,7 +518,7 @@ function section2sister12S(cookie) {
 function section2sister13S(cookie) {
     return new Promise(function (resolve, reject) {
         request({
-            url: 'http://202.118.163.67/book/book142/uyu42mc.php',
+            url: 'http://202.114.27.5/book/book142/uyu42mc.php',
             method: 'POST',
             // proxy: 'http://neauproxy.feit.me:6000',
             headers: {
@@ -526,8 +526,8 @@ function section2sister13S(cookie) {
                 'Accept-Encoding': 'gzip, deflate',
                 'Accept-Language': 'zh-CN,zh;q=0.9',
                 Cookie: cookie,
-                Host: '202.118.163.67',
-                Origin: 'http://202.118.163.67',
+                Host: '202.114.27.5',
+                Origin: 'http://202.114.27.5',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
             },
             form: {
@@ -554,7 +554,7 @@ function section2sister13S(cookie) {
 function section2sister14S(cookie) {
     return new Promise(function (resolve, reject) {
         request({
-            url: 'http://202.118.163.67/book/book142/uyu42mc.php',
+            url: 'http://202.114.27.5/book/book142/uyu42mc.php',
             method: 'POST',
             // proxy: 'http://neauproxy.feit.me:6000',
             headers: {
@@ -562,8 +562,8 @@ function section2sister14S(cookie) {
                 'Accept-Encoding': 'gzip, deflate',
                 'Accept-Language': 'zh-CN,zh;q=0.9',
                 Cookie: cookie,
-                Host: '202.118.163.67',
-                Origin: 'http://202.118.163.67',
+                Host: '202.114.27.5',
+                Origin: 'http://202.114.27.5',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
             },
             form: {
@@ -590,7 +590,7 @@ function section2sister14S(cookie) {
 function section2sister15S(cookie) {
     return new Promise(function (resolve, reject) {
         request({
-            url: 'http://202.118.163.67/book/book142/uyu44blank.php',
+            url: 'http://202.114.27.5/book/book142/uyu44blank.php',
             method: 'POST',
             // proxy: 'http://neauproxy.feit.me:6000',
             headers: {
@@ -598,8 +598,8 @@ function section2sister15S(cookie) {
                 'Accept-Encoding': 'gzip, deflate',
                 'Accept-Language': 'zh-CN,zh;q=0.9',
                 Cookie: cookie,
-                Host: '202.118.163.67',
-                Origin: 'http://202.118.163.67',
+                Host: '202.114.27.5',
+                Origin: 'http://202.114.27.5',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
             },
             form: {
@@ -632,7 +632,7 @@ function section2sister15S(cookie) {
 function section2sister16S(cookie) {
     return new Promise(function (resolve, reject) {
         request({
-            url: 'http://202.118.163.67/book/book142/uyu45mc.php',
+            url: 'http://202.114.27.5/book/book142/uyu45mc.php',
             method: 'POST',
             // proxy: 'http://neauproxy.feit.me:6000',
             headers: {
@@ -640,8 +640,8 @@ function section2sister16S(cookie) {
                 'Accept-Encoding': 'gzip, deflate',
                 'Accept-Language': 'zh-CN,zh;q=0.9',
                 Cookie: cookie,
-                Host: '202.118.163.67',
-                Origin: 'http://202.118.163.67',
+                Host: '202.114.27.5',
+                Origin: 'http://202.114.27.5',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
             },
             form: {
@@ -666,7 +666,7 @@ function section2sister16S(cookie) {
 function section2sister17S(cookie) {
     return new Promise(function (resolve, reject) {
         request({
-            url: 'http://202.118.163.67/book/book142/uyu45mc.php',
+            url: 'http://202.114.27.5/book/book142/uyu45mc.php',
             method: 'POST',
             // proxy: 'http://neauproxy.feit.me:6000',
             headers: {
@@ -674,8 +674,8 @@ function section2sister17S(cookie) {
                 'Accept-Encoding': 'gzip, deflate',
                 'Accept-Language': 'zh-CN,zh;q=0.9',
                 Cookie: cookie,
-                Host: '202.118.163.67',
-                Origin: 'http://202.118.163.67',
+                Host: '202.114.27.5',
+                Origin: 'http://202.114.27.5',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
             },
             form: {
@@ -700,7 +700,7 @@ function section2sister17S(cookie) {
 function test(cookie) {
     return new Promise(function (resolve, reject) {
         request({
-            url: 'http://202.118.163.67/book/book142/uyu72.php',
+            url: 'http://202.114.27.5/book/book142/uyu72.php',
             method: 'POST',
             // proxy: 'http://neauproxy.feit.me:6000',
             headers: {
@@ -708,8 +708,8 @@ function test(cookie) {
                 'Accept-Encoding': 'gzip, deflate',
                 'Accept-Language': 'zh-CN,zh;q=0.9',
                 Cookie: cookie,
-                Host: '202.118.163.67',
-                Origin: 'http://202.118.163.67',
+                Host: '202.114.27.5',
+                Origin: 'http://202.114.27.5',
                 'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'
             },
             form: {
